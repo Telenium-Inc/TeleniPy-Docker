@@ -18,5 +18,4 @@ RUN apt-get install -y postgresql-9.3 postgresql-server-dev-9.3
 RUN sed -i -e 's/peer/trust/' /etc/postgresql/9.3/main/pg_hba.conf
 RUN sed -i -e 's/md5/trust/' /etc/postgresql/9.3/main/pg_hba.conf
 RUN service postgresql stop
-RUN service postgresql start
-RUN createdb -U postgres -O postgres test
+RUN service postgresql start && createdb -U postgres -O postgres test
