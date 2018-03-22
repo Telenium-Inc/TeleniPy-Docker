@@ -11,6 +11,9 @@ RUN pip install --upgrade pip
 # Install tox
 RUN pip install tox
 
+# Install pstree
+RUN apt-get install -y psmisc
+
 # Install PostgreSQL 9.3
 RUN apt-get install -y postgresql-9.3 postgresql-server-dev-9.3
 
